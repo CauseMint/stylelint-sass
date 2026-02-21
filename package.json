@@ -11,6 +11,10 @@
   "engines": {
     "node": ">=20"
   },
+  "peerDependencies": {
+    "sass-parser": ">=0.4",
+    "stylelint": ">=16"
+  },
   "scripts": {
     "lint": "eslint . && markdownlint-cli2 '**/*.md' '#node_modules'",
     "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules'",
@@ -31,6 +35,8 @@
     "lint-staged": "^16.2.7",
     "markdownlint-cli2": "^0.21.0",
     "prettier": "^3.8.1",
+    "sass-parser": "^0.4.42",
+    "stylelint": "^17.3.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.0",
     "vitest": "^4.0.18"
