@@ -30,22 +30,31 @@ npx stylelint "src/**/*.sass"
 
 <!-- markdownlint-disable MD013 -->
 
-| Rule                                                                                      | Default      | Category    |
-| ----------------------------------------------------------------------------------------- | ------------ | ----------- |
-| [`sass/no-debug`](docs/rules/no-debug.md)                                                 | `true`       | Disallow    |
-| [`sass/no-warn`](docs/rules/no-warn.md)                                                   | `true`       | Disallow    |
-| [`sass/no-import`](docs/rules/no-import.md)                                               | `true`       | Disallow    |
-| [`sass/at-extend-no-missing-placeholder`](docs/rules/at-extend-no-missing-placeholder.md) | `true`       | @extend     |
-| [`sass/dollar-variable-pattern`](docs/rules/dollar-variable-pattern.md)                   | `kebab-case` | Naming      |
-| [`sass/percent-placeholder-pattern`](docs/rules/percent-placeholder-pattern.md)           | `kebab-case` | Naming      |
-| [`sass/at-mixin-pattern`](docs/rules/at-mixin-pattern.md)                                 | `kebab-case` | Naming      |
-| [`sass/at-function-pattern`](docs/rules/at-function-pattern.md)                           | `kebab-case` | Naming      |
-| [`sass/no-global-function-names`](docs/rules/no-global-function-names.md)                 | `true`       | Modern Sass |
-| [`sass/at-use-no-redundant-alias`](docs/rules/at-use-no-redundant-alias.md)               | `true`       | Modern Sass |
-| [`sass/at-if-no-null`](docs/rules/at-if-no-null.md)                                       | `true`       | Modern Sass |
-| [`sass/extends-before-declarations`](docs/rules/extends-before-declarations.md)           | `true`       | Ordering    |
-| [`sass/mixins-before-declarations`](docs/rules/mixins-before-declarations.md)             | `true`       | Ordering    |
-| [`sass/declarations-before-nesting`](docs/rules/declarations-before-nesting.md)           | `true`       | Ordering    |
+| Rule                                                                                                  | Default      | Category       |
+| ----------------------------------------------------------------------------------------------------- | ------------ | -------------- |
+| [`sass/no-debug`](docs/rules/no-debug.md)                                                             | `true`       | Disallow       |
+| [`sass/no-warn`](docs/rules/no-warn.md)                                                               | `true`       | Disallow       |
+| [`sass/no-import`](docs/rules/no-import.md)                                                           | `true`       | Disallow       |
+| [`sass/dollar-variable-pattern`](docs/rules/dollar-variable-pattern.md)                               | `kebab-case` | Naming         |
+| [`sass/percent-placeholder-pattern`](docs/rules/percent-placeholder-pattern.md)                       | `kebab-case` | Naming         |
+| [`sass/at-mixin-pattern`](docs/rules/at-mixin-pattern.md)                                             | `kebab-case` | Naming         |
+| [`sass/at-function-pattern`](docs/rules/at-function-pattern.md)                                       | `kebab-case` | Naming         |
+| [`sass/at-extend-no-missing-placeholder`](docs/rules/at-extend-no-missing-placeholder.md)             | `true`       | @extend        |
+| [`sass/extends-before-declarations`](docs/rules/extends-before-declarations.md)                       | `true`       | Ordering       |
+| [`sass/mixins-before-declarations`](docs/rules/mixins-before-declarations.md)                         | `true`       | Ordering       |
+| [`sass/declarations-before-nesting`](docs/rules/declarations-before-nesting.md)                       | `true`       | Ordering       |
+| [`sass/no-global-function-names`](docs/rules/no-global-function-names.md)                             | `true`       | Modern Sass    |
+| [`sass/at-use-no-redundant-alias`](docs/rules/at-use-no-redundant-alias.md)                           | `true`       | Modern Sass    |
+| [`sass/at-if-no-null`](docs/rules/at-if-no-null.md)                                                   | `true`       | Modern Sass    |
+| [`sass/at-use-no-unnamespaced`](docs/rules/at-use-no-unnamespaced.md)                                 | `true`       | Modern Sass    |
+| [`sass/no-duplicate-mixins`](docs/rules/no-duplicate-mixins.md)                                       | `true`       | Duplicates     |
+| [`sass/no-duplicate-dollar-variables`](docs/rules/no-duplicate-dollar-variables.md)                   | `true`       | Duplicates     |
+| [`sass/no-duplicate-load-rules`](docs/rules/no-duplicate-load-rules.md)                               | `true`       | Duplicates     |
+| [`sass/no-color-literals`](docs/rules/no-color-literals.md)                                           | `true`       | Best Practices |
+| [`sass/operator-no-unspaced`](docs/rules/operator-no-unspaced.md)                                     | `true`       | Best Practices |
+| [`sass/dimension-no-non-numeric-values`](docs/rules/dimension-no-non-numeric-values.md)               | `true`       | Best Practices |
+| [`sass/selector-no-union-class-name`](docs/rules/selector-no-union-class-name.md)                     | `true`       | Best Practices |
+| [`sass/selector-no-redundant-nesting-selector`](docs/rules/selector-no-redundant-nesting-selector.md) | `true`       | Best Practices |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -56,8 +65,8 @@ and rule implementation guide.
 
 The fastest way to get a working dev environment is with a
 [Dev Container](.devcontainer/README.md) — open the repo in VS Code or Cursor and run
-**Dev Containers: Reopen in Container**. Everything (Node 22, pnpm, gh CLI, Graphite CLI,
-Claude Code) is pre-installed, and host authentication (gh, gt, Claude) persists across rebuilds
+**Dev Containers: Reopen in Container**. Everything (Node 22, pnpm, GitHub CLI (gh),
+Graphite CLI (gt), Claude Code) is pre-installed, and host authentication persists across rebuilds
 via bind mounts.
 
 For local AI code review before CI, install
