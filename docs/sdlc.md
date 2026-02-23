@@ -235,12 +235,15 @@ Every branch gets its own
 `main` clean in the primary working tree and allows parallel work on
 multiple branches.
 
+The worktree path must mirror the branch name exactly:
+
 ```bash
-# Create a worktree for a new branch
-git worktree add .worktrees/no-debug -b feat/sass-lint-12-no-debug
+# Create a worktree — path mirrors branch name
+git worktree add .worktrees/feat/sass-lint-12-no-debug \
+  -b feat/sass-lint-12-no-debug
 
 # Work in the worktree
-cd .worktrees/no-debug
+cd .worktrees/feat/sass-lint-12-no-debug
 
 # Cleanup happens automatically via /post-merge after the PR merges
 ```
@@ -257,7 +260,9 @@ where a chain of dependent branches are reviewed as focused,
 incremental PRs instead of one large diff:
 
 ```bash
-git worktree add .worktrees/child -b feat/sass-lint-13-child parent-branch
+git worktree add .worktrees/feat/sass-lint-13-child \
+  -b feat/sass-lint-13-child \
+  feat/sass-lint-12-parent
 ```
 
 ### Conventional commits
