@@ -40,6 +40,16 @@ config that bundles both core and plugin rules tuned for `.sass` files.
 **Who it's for**: any team that writes `.sass` (indented syntax) and
 wants automated linting integrated into their Stylelint pipeline.
 
+**Why it exists**: in an agentic development workflow, Tailwind's
+core advantages — eliminating naming fatigue, enforcing consistency,
+reducing onboarding friction — are irrelevant when AI agents are the
+primary engineering workforce. SASS provides clean semantic HTML, full
+separation of concerns, and zero framework lock-in, while PurgeCSS
+handles dead CSS elimination at build time. The missing piece was a
+modern `.sass` linter — see the
+[README](../README.md#why-sass-why-not-tailwind) for the full
+rationale.
+
 ---
 
 ## Development Environment Setup

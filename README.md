@@ -4,6 +4,33 @@ A [Stylelint](https://stylelint.io/) plugin for linting `.sass` (indented syntax
 [sass-parser](https://www.npmjs.com/package/sass-parser) (official, PostCSS-compatible, maintained
 by the Sass team).
 
+## Why SASS? Why not Tailwind?
+
+Tailwind solves real problems for human teams: naming fatigue, dead CSS accumulation,
+inconsistency across developers, and onboarding friction. But in an **agentic development**
+workflow — where AI agents write and maintain the majority of code — the calculus changes:
+
+<!-- markdownlint-disable MD013 -->
+
+| Tailwind advantage          | For human teams | For AI agents                                              |
+| --------------------------- | --------------- | ---------------------------------------------------------- |
+| Eliminates naming fatigue   | High value      | **Irrelevant** — naming has zero cognitive cost for agents |
+| Enforces consistency        | High value      | **Redundant** — agents follow design tokens precisely      |
+| Low onboarding friction     | High value      | **Irrelevant** — agents don't need onboarding              |
+| Colocation (style + markup) | Medium value    | **Marginal** — agents read multiple files without cost     |
+| Prevents dead CSS           | High value      | **Replaceable** — PurgeCSS solves this at build time       |
+
+<!-- markdownlint-enable MD013 -->
+
+With Tailwind's advantages neutralized, SASS offers clear benefits: clean semantic HTML, full
+separation of concerns, zero framework lock-in, nesting/mixins/partials for DRY stylesheets,
+and equivalent bundle performance via PurgeCSS. Dead CSS prevention is handled by PurgeCSS
+(build), Stylelint (lint), and Knip (project audit).
+
+The missing piece was a **modern Stylelint plugin for `.sass` indented syntax** — the existing
+`stylelint-scss` targets SCSS only, and the original `sass-lint` is unmaintained. This project
+fills that gap, built on the official `sass-parser` maintained by the Sass team.
+
 ## Installation
 
 ```bash
